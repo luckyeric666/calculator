@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.hsbc</groupId>
+	<groupId>com.airwallex</groupId>
 	<artifactId>calculator</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
@@ -18,7 +18,8 @@
 		<java.version>1.8</java.version>
 		<junit.version>4.12</junit.version>
 		<cucumber.version>1.2.5</cucumber.version>
-		<asertj.version>3.6.0</asertj.version>		
+		<asertj.version>3.6.0</asertj.version>
+		<commons.version>3.5</commons.version>		
 	</properties>
 
 	<dependencies>
@@ -28,23 +29,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		
-		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-jdbc</artifactId>
-		</dependency>
 
 		<!-- apache -->
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.5</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.0</version>
+			<version>${commons.version}</version>
 		</dependency>
 		
 		<!-- test -->
