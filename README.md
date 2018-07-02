@@ -26,12 +26,12 @@ Run As / Java Application
 
 #Running the tests
 
-#####Integration Test
+##### Integration Test
 Right click com.airwallex.cucumber.CalculatorIntegrationTest.java 
 Run As / Junit Test
 Feature is defined at calculator.feature
 
-#####Mock Test
+##### Mock Test
 Omitted here. It will be almost same as intergation test, as calculator dont have dependency.
 
 
