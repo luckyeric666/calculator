@@ -1,4 +1,4 @@
-package com.airwallex;
+package com.airwallex.model;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -23,7 +23,7 @@ public class RPNDecimal {
 	 * @param op
 	 * @return
 	 */
-	public RPNDecimal operator(RPNDecimal rd, Operator op) {
+	public RPNDecimal arithmetic(RPNDecimal rd, Operator op) {
 		switch (op) {
 		case ADD:
 			return add(rd);

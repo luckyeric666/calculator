@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootContextLoader;
 import org.springframework.test.context.ContextConfiguration;
 
 import com.airwallex.Application;
-import com.airwallex.Calculator;
+import com.airwallex.service.Calculator;
+import com.airwallex.service.LineParser;
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -23,6 +24,9 @@ import cucumber.api.java.en.Then;
 public class CalculatorStepDefs {
 
 	@Autowired
+	private LineParser lp;
+	
+	@Autowired
 	private Calculator calculator;
 
 	private String result;
@@ -36,7 +40,7 @@ public class CalculatorStepDefs {
 
 	@Given("^user type \"([^\"]*)\"$")
 	public void user_type(String type) throws Throwable {
-		result = calculator.calculate(type.split(" "));
+		result = lp.parse(type);
 	}
 
 	@Then("^we should see$")

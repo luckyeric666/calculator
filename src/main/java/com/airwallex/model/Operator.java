@@ -1,10 +1,10 @@
-package com.airwallex;
+package com.airwallex.model;
 
 public enum Operator {
 
 	ADD("+"), SUBTRACT("-"), MULTIPLY("*"), DIVIDE("/"), SQRT("sqrt"), UNDO("undo"), CLEAR("clear");
 
-	protected String symbol;
+	public String symbol;
 
 	private Operator(String symbol) {
 		this.symbol = symbol;

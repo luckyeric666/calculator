@@ -1,10 +1,15 @@
 #Calculator Coding Task
  
 A RPN Calculator 
-Will only know operators of +,-,*,/,sqrt,undo,clear
+Will only know operations of +,-,*,/,sqrt,undo,clear,numbers
 Will arithmetic to scale of 15
 Will display numbers to scale of 10
 Will stop if meet unknown, insufficient params, or empty calculator
+
+Demoed bdd test with minimal codes and testing logics
+Demoed sqrt to high scale
+Demoed using Command pattern in Spring way
+
 
 
 #Running the code
@@ -32,7 +37,7 @@ Run As / Junit Test
 Feature is defined at calculator.feature
 
 ##### Mock Test
-Omitted here. It will be almost same as intergation test, as calculator dont have dependency.
+Omitted here.
 
 
 ![alt text](file:test_result.jpg "Test Result")
