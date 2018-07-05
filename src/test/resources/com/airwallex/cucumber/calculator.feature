@@ -57,6 +57,14 @@ Feature: Calculator
       """
       operator * (position 15): insufficient parameters
 	  stack: 11
+      """
+
+  Scenario: negative params
+    Given user type "1 -2 sqrt 3 4 +"
+	Then we should see
+      """
+      operator sqrt (position 5): negative parameters
+	  stack: 1 -2
       """	  
 	  
   Scenario: clear and insufficient params

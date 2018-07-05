@@ -81,6 +81,11 @@ public class RPNDecimal {
 	public boolean isResult() {
 		return isResult;
 	}
+	
+	public boolean isNegative() {
+		return decimal.signum() == -1;
+	}
+	
 
 	@Override
 	public String toString() {

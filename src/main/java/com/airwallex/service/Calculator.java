@@ -94,7 +94,14 @@ public class Calculator {
 		stack = (Stack<RPNDecimal>) stack.clone();
 		calculator.push(stack);
 		if (SQRT == op) {
-			stack.push(stack.pop().arithmetic(null, op)); //push result back to stack
+			//sqrt cant be negative
+			if (stack.peek().isNegative()) {
+				String msg = String.format("operator %s (position %s): negative parameters", op.symbol, i * 2 + 1);
+				log.error(msg);
+				return msg + "\n";
+			}
+			stack.push(stack.pop().arithmetic(null, op)); 
+			
 		} else {
 			RPNDecimal d2 = stack.pop();
 			RPNDecimal d1 = stack.pop();
